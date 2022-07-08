@@ -1,8 +1,10 @@
 import cv2
+import sys, os
 import numpy as np
 from matplotlib import pyplot as pl
 
-img = cv2.imread("C:/Users/Shein/PycharmProjects/pythonProject/images/MrIncredible.jpg")
+folder_dir = os.path.dirname(os.path.abspath(__file__))
+img = cv2.imread(os.path.join(folder_dir, "images/InputImage.jpg"))
 img_result = np.zeros(img.shape, dtype='uint8')
 
 #-------- Оптимизация изображения -------------
