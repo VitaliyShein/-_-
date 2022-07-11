@@ -24,7 +24,7 @@ contours, hir = cv2.findContours(img_optimased, cv2.RETR_TREE, cv2.CHAIN_APPROX_
 
 for cnt in contours :
     epsilon = 0.001*cv2.arcLength(cnt, False)
-    peri = cv2.arcLength(cnt, True)
+    peri = cv2.arcLength(cntq, True)
     approx = cv2.approxPolyDP(cnt, epsilon, False)
     cv2.drawContours(img_result, approx, -1, (0, 0, 255), 1)
 
